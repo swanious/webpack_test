@@ -1,0 +1,40 @@
+{
+  "version": 3,
+  "sources": [
+    "webpack://esnext-project/./src/js/lib.js",
+    "webpack://esnext-project/webpack/bootstrap",
+    "webpack://esnext-project/webpack/runtime/define property getters",
+    "webpack://esnext-project/webpack/runtime/hasOwnProperty shorthand",
+    "webpack://esnext-project/webpack/runtime/make namespace object",
+    "webpack://esnext-project/./src/js/main.js"
+  ],
+  "names": [
+    "pi",
+    "Math",
+    "PI",
+    "power",
+    "x",
+    "y",
+    "Foo",
+    "a",
+    "b",
+    "c",
+    "d",
+    "console",
+    "log",
+    "f",
+    "foo",
+    "bar"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAO,IAAMA,EAAE,GAAGC,IAAI,CAACC,EAAhB,C,CAAoB;;AAEpB,SAASC,KAAT,CAAeC,CAAf,EAAkBC,CAAlB,EAAqB;AAC1B,kBAAOD,CAAP,EAAYC,CAAZ,EAD0B,CACX;AAChB,C,CAED;;;;AACO,IAAMC,GAAb;AAAA;AAAA;;AAAA;AAAA;AAAA,aACa;AADb;AAAA;;AAAA;AAAA;AAAA,WACiB;AAEf,mBAAM;AACJ;AACA,qDAA4B;AAAEC,SAAC,EAAE,CAAL;AAAQC,SAAC,EAAE;AAAX,OAA5B;AAA4CC,SAAC,EAAE,CAA/C;AAAkDC,SAAC,EAAE;AAArD;AAAA,UAAQH,CAAR,YAAQA,CAAR;AAAA,UAAWC,CAAX,YAAWA,CAAX;AAAA,UAAiBJ,CAAjB;;AACA,aAAO;AAAEG,SAAC,EAADA,CAAF;AAAKC,SAAC,EAADA,CAAL;AAAQJ,SAAC,EAADA;AAAR,OAAP;AACD;AAPH;AAAA;AAAA,WASE,eAAM;AACJ,mCAAO,IAAP;AACD;AAXH;;AAAA;AAAA,I;;;;;;UCPA;UACA;;UAEA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;UACA;;UAEA;UACA;;UAEA;UACA;UACA;;;;;WCtBA;WACA;WACA;WACA;WACA,wCAAwC,yCAAyC;WACjF;WACA;WACA,E;;;;;WCPA,wF;;;;;WCAA;WACA;WACA;WACA,sDAAsD,kBAAkB;WACxE;WACA,+CAA+C,cAAc;WAC7D,E;;;;;;;;;;;;ACNA;AAEAO,OAAO,CAACC,GAAR,CAAYZ,oCAAZ;AACAW,OAAO,CAACC,GAAR,CAAYT,2CAAK,CAACH,oCAAD,EAAKA,oCAAL,CAAjB;AAEA,IAAMa,CAAC,GAAG,IAAIP,qCAAJ,EAAV;AACAK,OAAO,CAACC,GAAR,CAAYC,CAAC,CAACC,GAAF,EAAZ;AACAH,OAAO,CAACC,GAAR,CAAYC,CAAC,CAACE,GAAF,EAAZ,E",
+  "file": "bundle.js",
+  "sourcesContent": [
+    "export const pi = Math.PI; // es6 모듈\r\n\r\nexport function power(x, y) {\r\n  return x ** y; // es7 지수 연산자\r\n}\r\n\r\n// es6 클래스\r\nexport class Foo {\r\n  #private = 10; // stage 3: 클래스 필드 정의 제안\r\n\r\n  foo() {\r\n    // stage 4: 객체 Rest/Spread 프로퍼티 제안\r\n    const { a, b, ...x } = { ...{ a: 1, b: 2 }, c: 3, d: 4 };\r\n    return { a, b, x };\r\n  }\r\n\r\n  bar() {\r\n    return this.#private;\r\n  }\r\n}\r\n",
+    "// The module cache\nvar __webpack_module_cache__ = {};\n\n// The require function\nfunction __webpack_require__(moduleId) {\n\t// Check if module is in cache\n\tvar cachedModule = __webpack_module_cache__[moduleId];\n\tif (cachedModule !== undefined) {\n\t\treturn cachedModule.exports;\n\t}\n\t// Create a new module (and put it into the cache)\n\tvar module = __webpack_module_cache__[moduleId] = {\n\t\t// no module.id needed\n\t\t// no module.loaded needed\n\t\texports: {}\n\t};\n\n\t// Execute the module function\n\t__webpack_modules__[moduleId](module, module.exports, __webpack_require__);\n\n\t// Return the exports of the module\n\treturn module.exports;\n}\n\n",
+    "// define getter functions for harmony exports\n__webpack_require__.d = (exports, definition) => {\n\tfor(var key in definition) {\n\t\tif(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {\n\t\t\tObject.defineProperty(exports, key, { enumerable: true, get: definition[key] });\n\t\t}\n\t}\n};",
+    "__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))",
+    "// define __esModule on exports\n__webpack_require__.r = (exports) => {\n\tif(typeof Symbol !== 'undefined' && Symbol.toStringTag) {\n\t\tObject.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });\n\t}\n\tObject.defineProperty(exports, '__esModule', { value: true });\n};",
+    "import { pi, power, Foo } from \"./lib\";\r\n\r\nconsole.log(pi);\r\nconsole.log(power(pi, pi));\r\n\r\nconst f = new Foo();\r\nconsole.log(f.foo());\r\nconsole.log(f.bar());\r\n"
+  ],
+  "sourceRoot": ""
+}
