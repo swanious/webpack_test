@@ -6,13 +6,13 @@
 >
 > npm: 6.14.11
 
-## babel을 사용하는 이유?
+## 📌babel을 사용하는 이유?
 
 크롬, 사파리, 파이어폭스, 엣지 같은 [에버그린 브라우저](https://www.techopedia.com/definition/31094/evergreen-browser)의 ES6 지원율은 98%로 거의 대부분 사양을 지원하지만, 구형 브라우저(IE 11)의 지원율은 약 11%다. 이처럼 ES6와 그 이후 문법은 IE에서 지원하지 않기때문에 컴파일 과정에서 babel을 통해 트랜스파일하여 IE가 이해해먹을 수 있도록 변환해야한다. 그 역할을 babel녀석이 하는 것
 
 
 
-## babel
+## 📌babel
 
 - arrow Func(es6), 지수 연산자(es7)은 IE에서 사용할 수 없으므로, babel을 통해 트랜스파일 해주어야 한다.
 
@@ -288,7 +288,7 @@ script 태그를 통해 파일을 불러서 브라우저 개발자 도구의 con
 
 
 
-## webpack
+## 📌webpack
 
 ### webpack 설치
 
@@ -599,9 +599,9 @@ console.log(_babel_runtime_corejs3_core_js_stable_instance_includes__WEBPACK_IMP
 
 
 
-## 마치며
+## 📌마치며
 
-babel과 webpack에 대해 전혀 모르다가 책을 통해 *왜 사용하는가?* 와 사용법을 알게돼서 좋았다. 
+babel과 webpack에 대해 전혀 모르다가 책을 통해 **왜 사용하는가?** 와 사용법을 알게돼서 좋았다. 
 
 babel과 webpack을 하나씩 더해가면서 실습하니까 이해하기 좋았고, 더불어  책이 쓰여진 시점과 현재의 상황이 달라서 발생하는 오류를 직접 마주치면서 시간에 따라 업데이트되고 변화하는 기술에 대해 깨어있어야 한다는 점을 알게됐다. 
 
